@@ -13,7 +13,7 @@ from app.services.decorator import verify_entry_key
 
 
 def validNumber(phone_nuber):
-    pattern = re.compile("^\\([\d]{2}\\)[\d]{5}-[\d]{5}$", re.IGNORECASE)
+    pattern = re.compile("^\\([\d]{2}\\)[\d]{5}-[\d]{4}$", re.IGNORECASE)
     return pattern.match(phone_nuber) is not None
 
 def create_lead():
