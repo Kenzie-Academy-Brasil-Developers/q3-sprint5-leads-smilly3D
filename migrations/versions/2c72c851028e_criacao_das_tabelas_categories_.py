@@ -1,8 +1,8 @@
-"""create table 'start new leads table'
+"""criacao das tabelas, 'categories', 'eisenhower', 'tasks_category' e 'tasks'
 
-Revision ID: 0415d55be3f7
-Revises: b2f71915502d
-Create Date: 2022-02-10 15:28:31.346040
+Revision ID: 2c72c851028e
+Revises: 
+Create Date: 2022-02-18 10:20:30.890339
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '0415d55be3f7'
-down_revision = 'b2f71915502d'
+revision = '2c72c851028e'
+down_revision = None
 branch_labels = None
 depends_on = None
 

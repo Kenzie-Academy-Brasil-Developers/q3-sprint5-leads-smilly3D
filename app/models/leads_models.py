@@ -19,8 +19,8 @@ class LeadsModel(db.Model):
     name = Column(String, nullable=False)
     email = Column(String, nullable=False, unique=True)
     phone = Column(String, nullable=False, unique=True)
-    creation_date = Column(DateTime, default=datetime.now().strftime("%D %H:%M:%S"))
-    last_visit = Column(DateTime, default=datetime.now().strftime("%D %H:%M:%S"))
+    creation_date = Column(DateTime, default=datetime.now())
+    last_visit = Column(DateTime, default=datetime.now())
     visits = Column(Integer, default=1)
 
     
