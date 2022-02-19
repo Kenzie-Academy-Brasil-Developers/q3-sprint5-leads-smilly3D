@@ -57,7 +57,7 @@ def patch_lead():
 
     try:
         lead = base_query.filter_by(email= lead_email).first_or_404(description="Nenhum dado encontrado")
-        lead.last_visit = datetime.now().strftime("%D %H:%M:%S")
+        lead.last_visit = datetime.now()
         lead.visits += 1
 
         for key, value in data.items():
