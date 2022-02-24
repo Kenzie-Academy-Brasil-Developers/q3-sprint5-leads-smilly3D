@@ -1,12 +1,13 @@
 # Leads
 ## base api: https://entrega-19-leads15.herokuapp.com
+
 ## POST /api/leads
 
 ### Registrar um novo Lead no banco de dados.
 
 #### Modelo de requisição:
 
-    POST - localhost:5000/leads
+    POST - https://entrega-19-leads15.herokuapp.com/api/leads
 
     {
         "name": "John Doe",
@@ -33,7 +34,7 @@
 
 #### Modelo de requisição:
 
-    GET - localhost:5000/leads
+    GET - https://entrega-19-leads15.herokuapp.com/api/leads
 
 ---
 
@@ -43,7 +44,7 @@
 
 #### Modelo de requisição:
 
-    PATCH - localhost:5000/
+    PATCH - https://entrega-19-leads15.herokuapp.com/api/leads
 
     {
         "email": "john@email.com"
@@ -57,7 +58,7 @@
 
 #### Modelo de requisição:
 
-    DELETE - localhost:5000/
+    DELETE - https://entrega-19-leads15.herokuapp.com/api/leads
 
     {
         "email": "john@email.com"
