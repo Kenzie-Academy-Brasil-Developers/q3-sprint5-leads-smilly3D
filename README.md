@@ -1,18 +1,60 @@
 # Leads
 
+## POST /leads
 
-| Critérios | Pts. |
-|---|---|
-| Utilizar **SQLAlchemy**, **Dataclass**, **Blueprint**, **Migrations** e **Padrão Flask Factory** corretamente. | 1 |
-| [GET] **/leads** - Rota funcionando e ordenada de acordo com o enunciado. | 1 |
-| [GET] **/leads** - [ERRO] Nenhum dado encontrado. | 0.5 |
-| [POST] **/leads** - Rota funcionando de acordo com o enunciado. | 1 |
-| [POST] **/leads** - [ERRO] E-mail e telefone únicos. | 0.5 |
-| [POST] **/leads** - [ERRO] Telefone obrigatoriamente no formato (xx)xxxxx-xxxx. | 0.5 |
-| [PATCH] **/leads** - Rota funcionando de acordo com o enunciado. | 2 |
-| [PATCH] **/leads** - [ERRO] - Corpo da requisição obrigatoriamente apenas com email e deve ser uma string; | 0.5 |
-| [PATCH] **/leads** - [ERRO] - Nenhum dado encontrado. | 0.5 |
-| [DELETE] **/leads** - Rota funcionando de acordo com o enunciado. | 1 |
-| [DELETE] **/leads** - [ERRO] - Corpo da requisição obrigatoriamente apenas com email e deve ser uma string; | 0.5 |
-| [DELETE] **/leads** - [ERRO] - Nenhum dado encontrado. | 0.5 |
-| Arquivos **requirements.txt**, **.env**, **.env.example** e **.gitignore** (**venv** e **.env** adicionados) | 0.5 |
+### Registrar um novo Lead no banco de dados.
+
+#### Modelo de requisição:
+    POST - localhost:5000/leads
+
+    {
+        "name": "John Doe",
+        "email": "john@email.com",
+        "phone": "(41)90000-0000"
+    }
+    
+#### Modelo de resposta:
+    {
+        "name": "John Doe",
+        "email": "john@email.com",
+        "phone": "(41)90000-0000",
+        "creation_date": "Fri, 10 Sep 2021 17:53:25 GMT",
+        "last_visit": "Fri, 10 Sep 2021 17:53:25 GMT",
+        "visits": 1
+    }
+----
+
+## GET /leads
+
+### Listar todos os LEADS por ordem de visitas, do maior para o menor.
+
+#### Modelo de requisição:
+    GET - localhost:5000/leads
+----
+
+## PATCH /leads
+
+### Registrar um novo Lead no banco de dados.
+
+#### Modelo de requisição:
+    PATCH - localhost:5000/
+
+    {
+        "email": "john@email.com"
+    }
+----
+    
+## DELETE /leads
+
+### Registrar um novo Lead no banco de dados.
+
+#### Modelo de requisição:
+    DELETE - localhost:5000/
+
+    {
+        "email": "john@email.com"
+    }
+    
+
+    
+
